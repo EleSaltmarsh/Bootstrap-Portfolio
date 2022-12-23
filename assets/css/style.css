@@ -1,11 +1,9 @@
-* {
-    margin: 0;
-  }
-  
-  /* Basic page layout */
+/* Basic page styling */
 
-section {
+body {
   margin: 4rem 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 hr {
@@ -13,23 +11,89 @@ hr {
   margin-left: 5%;
 }
 
+/* About */
+
 .self {
-  float: right;
-  padding: 5px;
-  top: 180px;
-  right: 20px;
   width: 200px;
-  height: 160px;
-  word-wrap: break-word;
+  height: 200px;
+  border-radius: 50%;
   object-fit: contain;
 }
 
-/* .carousel-inner {
-  height: 500px;
-  object-fit: cover;
+/* Portfolio */
+
+#content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  grid-template-areas: 
+    "pr1 pr2"
+    "pr3 pr4";
 }
 
-.carousel-caption {
-  top: 0;
-  bottom: auto;
-} */
+#pr1 {
+  grid-area: pr1;
+}
+
+#pr2 {
+  grid-area: pr2;
+}
+
+#pr3 {
+  grid-area: pr3;
+}
+
+#pr4 {
+  grid-area: pr4;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+}
+
+/* Skills */
+
+#skills li:hover {
+  background-color: black;
+  color: antiquewhite;
+  opacity: 0.7;
+}
+
+/* Contact */
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+  box-shadow: 5px 5px gray;
+}
+
+.mail {
+  background: black;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-github {
+  background: black;
+  color: white;
+}
